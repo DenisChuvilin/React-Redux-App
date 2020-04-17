@@ -4,10 +4,10 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import {jokeReducer} from './store/reducers/jokeReducer';
+import { createStore, applyMiddleware } from 'redux';
 
 import App from './App';
-import { createStore, applyMiddleware } from 'redux';
-import {jokeReducer} from './store/reducers/jokeReducer';
 
 
 const store = createStore(jokeReducer, applyMiddleware(thunk));
